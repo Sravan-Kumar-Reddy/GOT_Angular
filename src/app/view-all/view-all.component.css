@@ -1,0 +1,16 @@
+
+.characters>.card{
+	border: 1px green solid;
+	border-radius: 5px;
+	box-shadow: 2.5px 5px 18px #ff6633;
+}
+.houses>.card{
+	border: 1px #0059b3 solid;
+	border-radius: 5px;
+	box-shadow: 2.5px 5px 18px #4d88ff;
+}
+.books>.card{
+	border: 1px blue solid;
+	border-radius: 5px;
+	box-shadow: 2.5px 5px 18px pink;
+}

@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
   selector: 'app-view-one',
   templateUrl: './view-one.component.html',
   styleUrls: ['./view-one.component.css'],
-  providers:[Location]
+  providers: [Location]
   //preserveWhitespaces: true
 })
 export class ViewOneComponent implements OnInit {
@@ -22,7 +22,7 @@ export class ViewOneComponent implements OnInit {
   public allHouses;
   public allBooks;
 
-  constructor(private _route: ActivatedRoute, private router: Router,private viewRequestService: ViewRequestService,private location:Location) { }
+  constructor(private _route: ActivatedRoute, private router: Router, private viewRequestService: ViewRequestService, private location: Location) { }
 
   ngOnInit() {
     this.currentObject = this._route.snapshot.paramMap.get('name');
@@ -31,14 +31,14 @@ export class ViewOneComponent implements OnInit {
       data => {
         //console.log(typeof(data));
         this.allCharacters = data;
-        console.log("All Characters"+ this.allCharacters);
+        console.log("All Characters" + this.allCharacters);
 
         for (let i = 0; i < this.allCharacters.length; i++) {
           if (this.currentObject == this.allCharacters[i].url) {
             this.currentObject = this.allCharacters[i];
           }
         }
-          console.log(this.currentObject);
+        console.log(this.currentObject);
 
 
       },
@@ -79,7 +79,7 @@ export class ViewOneComponent implements OnInit {
     );
 
   }
-    goBackToPreviousPage(): any {
+  goBackToPreviousPage(): any {
 
     this.location.back();
 
