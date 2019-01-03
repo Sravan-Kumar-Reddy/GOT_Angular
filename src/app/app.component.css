@@ -1,0 +1,15 @@
+:root{
+	font-size: 18px;
+}
+.header{
+	background: #006699;
+	padding: 3%;
+	/*display: block;*/
+	color: white;
+	font-size: 2.5vw;/*2.5rem*/
+	/*margin-top: .25%;*/
+}
+.navbar{
+	background-color: #e3f2fd;
+	margin: 0 2% 2% 2%;
+}

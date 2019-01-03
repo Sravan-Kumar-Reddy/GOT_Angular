@@ -1,0 +1,86 @@
+<div class="container" *ngIf="currentObject">
+  <div class="row">
+    <div class="jumbotron">
+      <h1 *ngIf="currentObject.name" class="display-4">{{currentObject.name}}</h1>
+      <h1 *ngIf="!currentObject.name" class="display-4">{{currentObject.aliases}}</h1>
+      <p class="lead">Game of Thrones is an American fantasy drama television series created by David Benioff and D. B.
+        Weiss. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first
+        of which is A Game of Thrones.
+      </p>
+      <hr class="my-4">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th *ngIf="currentObject.gender">Gender</th>
+            <td *ngIf="currentObject.gender">{{currentObject.gender}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.name && currentObject.aliases">Alias</th>
+            <td *ngIf="currentObject.name && currentObject.aliases">{{currentObject.aliases}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.culture">Culture</th>
+            <td *ngIf="currentObject.culture">{{currentObject.culture}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.born">Born</th>
+            <td *ngIf="currentObject.born">{{currentObject.born}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.died">Died</th>
+            <td *ngIf="currentObject.died">{{currentObject.died}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.region">Region</th>
+            <td *ngIf="currentObject.region">{{currentObject.region}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.coatOfArms">Coat Of Arms</th>
+            <td *ngIf="currentObject.coatOfArms">{{currentObject.coatOfArms}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.currentLord">Current Lord</th>
+            <td *ngIf="currentObject.currentLord">{{currentObject.currentLord}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.heir">Heir</th>
+            <td *ngIf="currentObject.heir">{{currentObject.heir}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.isbn">ISBN</th>
+            <td *ngIf="currentObject.isbn">{{currentObject.isbn}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.numberOfPages">Number Of Pages</th>
+            <td *ngIf="currentObject.numberOfPages">{{currentObject.numberOfPages}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.authors">Authors</th>
+            <td *ngIf="currentObject.authors">{{currentObject.authors}}</td>
+          </tr>
+          <tr>
+            <th *ngIf="currentObject.released">Released</th>
+            <td *ngIf="currentObject.released">{{currentObject.released | date}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <!--gotta change it to 4-->
+      <a class="btn btn-primary" [routerLink]="['/home']">Home</a>
+    </div>
+    <div class="col-md-6">
+      <!--gotta change it to 4-->
+      <a class="btn btn-primary" [routerLink]="['/home']">Back</a>
+    </div>
+    <!--
+		<div class="col-md-4">
+			
+		</div>
+		-->
+  </div>
+  <br><br>
+</div>

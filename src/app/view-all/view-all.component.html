@@ -1,0 +1,61 @@
+<div class="container">
+  <h1 style="text-align: center;text-decoration: underline">Characters</h1>
+  <div *ngIf="allCharacters.length>0" class="row">
+    <div *ngFor="let char of allCharacters">
+      <div class="card col-md-12">
+        <div class="card-header">
+          <div *ngIf="char.name">
+            {{char.name}}
+          </div>
+          <div *ngIf="!char.name">
+            {{char.aliases}}
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a -natural lead-in to additional content.</p>
+          <div>
+            <a class="btn btn-primary" [routerLink]="['/view',char.url]">View</a>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+  <h1 style="text-align: center;text-decoration: underline">Houses</h1>
+
+  <div *ngIf="allHouses.length>0" class="row">
+    <div *ngFor="let house of allHouses">
+      <div class="card col-md-12">
+        <div class="card-header">
+          {{house.name}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a [routerLink]="['/view',house.url]" class="btn btn-primary">View</a>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+
+  <h1 style="text-align: center;text-decoration: underline">Books</h1>
+
+  <div *ngIf="allBooks.length>0" class="row">
+    <div *ngFor="let book of allBooks">
+      <div class="card col-md-12">
+        <div class="card-header">
+          {{book.name}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a [routerLink]="['/view',book.url]" class="btn btn-primary">View</a>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+</div>
